@@ -50,7 +50,7 @@ jobs:
       - run:
           name: Front-end test
           command: |
-      # Your job code here
+            # Your job code here
             cd frontend
             npm install
             npm run test
@@ -68,7 +68,7 @@ jobs:
       - run:
           name: Back-end test
           command: |      
-      # Your job code here
+            # Your job code here
             cd backend
             npm install
             npm run test
