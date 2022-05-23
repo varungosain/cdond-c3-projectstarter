@@ -45,7 +45,7 @@ jobs:
       # Checkout code from git
       - checkout
       # Restore from cache
-       - restore_cache:
+      - restore_cache:
           keys: [frontend-test]
       - run:
           name: Front-end test
@@ -63,7 +63,7 @@ jobs:
       # Checkout code from git
       - checkout
       # Restore from cache
-       - restore_cache:
+      - restore_cache:
           keys: [backend-test]
       - run:
           name: Back-end test
