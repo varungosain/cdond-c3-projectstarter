@@ -1,5 +1,7 @@
 version: 2.1
-            
+commands:
+  destroy-environment:
+    description: Destroy back-end and front-end cloudformation stacks given a workflow ID.           
 jobs:
   build-frontend:
     docker:
@@ -140,10 +142,7 @@ jobs:
             - project/.circleci/ansible/inventory.txt
       - destroy-environment:
           workflow_id: ${CIRCLE_WORKFLOW_ID:0:7}
-      - revert-migrations:
-          workflow_id: "${CIRCLE_WORKFLOW_ID:0:7}"
-
-    
+     
 workflows:
   default:
     jobs:
