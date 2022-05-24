@@ -413,5 +413,4 @@ workflows:
       - front-end-smoke-test:
           requires: [back-end-smoke-test]
 
- - front-end-smoke-test
- - back-end-smoke-test
+
